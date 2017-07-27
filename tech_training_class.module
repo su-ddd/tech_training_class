@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Tech Training Class feature.
+ */
+
+include_once 'tech_training_class.features.inc';
