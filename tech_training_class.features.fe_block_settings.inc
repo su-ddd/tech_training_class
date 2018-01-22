@@ -121,7 +121,7 @@ function tech_training_class_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'stanford_uit',
-        'weight' => 6,
+        'weight' => 11,
       ),
     ),
     'title' => 'Featured Classes',
@@ -178,16 +178,16 @@ function tech_training_class_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'stanford_uit',
-        'weight' => 7,
+        'weight' => 12,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => 'Upcoming Classes',
+    'visibility' => 1,
   );
 
   $export['views-class_schedule-block_3'] = array(
     'cache' => -1,
-    'css_class' => 'content',
+    'css_class' => 'content margin-bottom-0',
     'custom' => 0,
     'delta' => 'class_schedule-block_3',
     'module' => 'views',
@@ -235,7 +235,7 @@ function tech_training_class_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'stanford_uit',
-        'weight' => 8,
+        'weight' => 2,
       ),
     ),
     'title' => '',
@@ -358,12 +358,12 @@ function tech_training_class_default_fe_block_settings() {
 
   $export['views-class_schedule-block_6'] = array(
     'cache' => -1,
-    'css_class' => 'poster poster-blue',
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'class_schedule-block_6',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'service/techtraining/classroom',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'itservices_seven' => array(
@@ -403,14 +403,14 @@ function tech_training_class_default_fe_block_settings() {
         'weight' => 0,
       ),
       'stanford_uit' => array(
-        'region' => 'content_upper',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'stanford_uit',
         'weight' => 0,
       ),
     ),
-    'title' => 'Upcoming Classes, Lectures, and Tech Briefings',
-    'visibility' => 1,
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-class_schedule-block_7'] = array(
@@ -463,7 +463,7 @@ function tech_training_class_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'stanford_uit',
-        'weight' => 3,
+        'weight' => 13,
       ),
     ),
     'title' => 'Upcoming Tech Briefings',
@@ -520,11 +520,11 @@ function tech_training_class_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'stanford_uit',
-        'weight' => 4,
+        'weight' => 14,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => 'Video Recordings of Past Tech Briefings',
+    'visibility' => 1,
   );
 
   return $export;

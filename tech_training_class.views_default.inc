@@ -1126,7 +1126,7 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<p>Technology Training offers live webinars that are STAP eligible and cover a breadth of applications and topics.</p>';
+  $handler->display->display_options['header']['area']['content'] = '<p class="center">Technology Training offers live webinars that are STAP eligible and cover a breadth of applications and topics.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -1278,7 +1278,7 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['filters']['field_class_location_tid']['field'] = 'field_class_location_tid';
   $handler->display->display_options['filters']['field_class_location_tid']['relationship'] = 'field_class_session_value';
   $handler->display->display_options['filters']['field_class_location_tid']['value'] = array(
-    200 => '200',
+    223 => '223',
   );
   $handler->display->display_options['filters']['field_class_location_tid']['expose']['operator_id'] = 'field_class_location_tid_op';
   $handler->display->display_options['filters']['field_class_location_tid']['expose']['label'] = 'Location (field_class_location)';
@@ -1446,18 +1446,30 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_class_code' => 'title',
-    'body' => 'field_class_code',
-    'title' => 'body',
     'field_class_start_date' => 'field_class_start_date',
     'field_class_date' => 'field_class_date',
     'field_class_start_date_1' => 'field_class_start_date_1',
+    'body' => 'body',
+    'title' => 'title',
+    'field_class_code' => 'field_class_code',
     'field_class_cost' => 'field_class_cost',
   );
   $handler->display->display_options['style_options']['default'] = 'field_class_start_date';
   $handler->display->display_options['style_options']['info'] = array(
-    'field_class_code' => array(
-      'sortable' => 1,
+    'field_class_start_date' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_start_date_1' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -1471,33 +1483,21 @@ function tech_training_class_views_default_views() {
       'empty_column' => 0,
     ),
     'title' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_class_start_date' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_class_date' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_class_start_date_1' => array(
-      'sortable' => 1,
+    'field_class_code' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_class_cost' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -1512,9 +1512,8 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<p>Technology Briefings are free sessions that are open to all members of the Stanford community. The intent of these sessions is to share information about new and emerging technologies, provide vendor updates, and inform users about changes to campus technologies. No registration is required to attend these events.</p>
-
-<p>All Tech Briefings take place in <a href="http://campus-map.stanford.edu/index.cfm?ID=14-160">Turing Auditorium (Polya Hall, Room 111)</a>. Most sessions can be attended remotely and are recorded for later viewing. If you have an idea for a Tech Briefing topic, or have questions or comments, please <a href="https://stanford.service-now.com/services?id=get_help&amp;cmdb_ci=5e560e9613e3e240d08ebda12244b01e">submit a Help Ticket</a>.</p>';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p>All Tech Briefings take place in <a href="http://campus-map.stanford.edu/index.cfm?ID=14-160">Turing Auditorium (Polya Hall, Room 111)</a>. Most sessions can be attended remotely and are recorded for later viewing. If you have an idea for a Tech Briefing topic, or have questions or comments, please <a href="https://stanford.service-now.com/services?id=get_help&amp;cmdb_ci=5e560e9613e3e240d08ebda12244b01e">submit a Help Ticket</a>.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field collection item: Start Date */
@@ -1634,7 +1633,7 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['filters']['field_class_category_tid']['table'] = 'field_data_field_class_category';
   $handler->display->display_options['filters']['field_class_category_tid']['field'] = 'field_class_category_tid';
   $handler->display->display_options['filters']['field_class_category_tid']['value'] = array(
-    195 => '195',
+    220 => '220',
   );
   $handler->display->display_options['filters']['field_class_category_tid']['expose']['operator_id'] = 'field_class_category_tid_op';
   $handler->display->display_options['filters']['field_class_category_tid']['expose']['label'] = 'Category';
@@ -1714,6 +1713,299 @@ function tech_training_class_views_default_views() {
   $handler = $view->new_display('block', 'Video Recordings of Past Tech Briefings', 'block_8');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Video Recordings of Past Tech Briefings';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'span10 offset1';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_class_start_date' => 'field_class_start_date',
+    'title' => 'title',
+    'field_class_start_date_1' => 'field_class_start_date_1',
+    'field_class_date' => 'field_class_date',
+    'field_class_code' => 'field_class_code',
+    'field_class_cost' => 'field_class_cost',
+    'body' => 'body',
+  );
+  $handler->display->display_options['style_options']['default'] = 'field_class_start_date';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_class_start_date' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_start_date_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_code' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_class_cost' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field collection item: Start Date */
+  $handler->display->display_options['fields']['field_class_start_date']['id'] = 'field_class_start_date';
+  $handler->display->display_options['fields']['field_class_start_date']['table'] = 'field_data_field_class_start_date';
+  $handler->display->display_options['fields']['field_class_start_date']['field'] = 'field_class_start_date';
+  $handler->display->display_options['fields']['field_class_start_date']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['fields']['field_class_start_date']['label'] = 'Date';
+  $handler->display->display_options['fields']['field_class_start_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_class_start_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_class_start_date']['settings'] = array(
+    'format_type' => 'month_year',
+    'custom_date_format' => '',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Topic';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<p><strong>[title]</strong></p>
+[body]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Start Date */
+  $handler->display->display_options['fields']['field_class_start_date_1']['id'] = 'field_class_start_date_1';
+  $handler->display->display_options['fields']['field_class_start_date_1']['table'] = 'field_data_field_class_start_date';
+  $handler->display->display_options['fields']['field_class_start_date_1']['field'] = 'field_class_start_date';
+  $handler->display->display_options['fields']['field_class_start_date_1']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['fields']['field_class_start_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_class_start_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_class_start_date_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_class_start_date_1']['alter']['text'] = '<ul class="none margin-0"><li>[field_class_start_date]</li>
+[field_class_date]
+</ul>';
+  $handler->display->display_options['fields']['field_class_start_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_class_start_date_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_class_start_date_1']['settings'] = array(
+    'format_type' => 'short',
+    'custom_date_format' => '',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Field collection item: Additional Days */
+  $handler->display->display_options['fields']['field_class_date']['id'] = 'field_class_date';
+  $handler->display->display_options['fields']['field_class_date']['table'] = 'field_data_field_class_date';
+  $handler->display->display_options['fields']['field_class_date']['field'] = 'field_class_date';
+  $handler->display->display_options['fields']['field_class_date']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['fields']['field_class_date']['label'] = '';
+  $handler->display->display_options['fields']['field_class_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_class_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_class_date']['alter']['text'] = '<li>[field_class_date]</li>';
+  $handler->display->display_options['fields']['field_class_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_class_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_class_date']['settings'] = array(
+    'format_type' => 'class_schedule_time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_class_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_class_date']['separator'] = '<li></li>';
+  /* Field: Content: Class Code */
+  $handler->display->display_options['fields']['field_class_code']['id'] = 'field_class_code';
+  $handler->display->display_options['fields']['field_class_code']['table'] = 'field_data_field_class_code';
+  $handler->display->display_options['fields']['field_class_code']['field'] = 'field_class_code';
+  $handler->display->display_options['fields']['field_class_code']['label'] = 'Code';
+  $handler->display->display_options['fields']['field_class_code']['exclude'] = TRUE;
+  /* Field: Field collection item: Cost */
+  $handler->display->display_options['fields']['field_class_cost']['id'] = 'field_class_cost';
+  $handler->display->display_options['fields']['field_class_cost']['table'] = 'field_data_field_class_cost';
+  $handler->display->display_options['fields']['field_class_cost']['field'] = 'field_class_cost';
+  $handler->display->display_options['fields']['field_class_cost']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['fields']['field_class_cost']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_class_cost']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_class_cost']['alter']['text'] = '$[field_class_cost] ';
+  $handler->display->display_options['fields']['field_class_cost']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_class_cost']['settings'] = array(
+    'thousand_separator' => ',',
+    'decimal_separator' => '.',
+    'scale' => '0',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '100',
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Field collection item: Start Date -  start date (field_class_start_date) */
+  $handler->display->display_options['sorts']['field_class_start_date_value']['id'] = 'field_class_start_date_value';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['table'] = 'field_data_field_class_start_date';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['field'] = 'field_class_start_date_value';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'class' => 'class',
+  );
+  /* Filter criterion: Content: Category (field_class_category) */
+  $handler->display->display_options['filters']['field_class_category_tid']['id'] = 'field_class_category_tid';
+  $handler->display->display_options['filters']['field_class_category_tid']['table'] = 'field_data_field_class_category';
+  $handler->display->display_options['filters']['field_class_category_tid']['field'] = 'field_class_category_tid';
+  $handler->display->display_options['filters']['field_class_category_tid']['value'] = array(
+    220 => '220',
+  );
+  $handler->display->display_options['filters']['field_class_category_tid']['expose']['operator_id'] = 'field_class_category_tid_op';
+  $handler->display->display_options['filters']['field_class_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_class_category_tid']['expose']['operator'] = 'field_class_category_tid_op';
+  $handler->display->display_options['filters']['field_class_category_tid']['expose']['identifier'] = 'field_class_category_tid';
+  $handler->display->display_options['filters']['field_class_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+    10 => 0,
+    11 => 0,
+    12 => 0,
+    13 => 0,
+    14 => 0,
+    15 => 0,
+    16 => 0,
+    17 => 0,
+    18 => 0,
+    108 => 0,
+    109 => 0,
+    110 => 0,
+    111 => 0,
+    112 => 0,
+    113 => 0,
+    116 => 0,
+    117 => 0,
+    118 => 0,
+    121 => 0,
+    122 => 0,
+    123 => 0,
+    124 => 0,
+    126 => 0,
+    127 => 0,
+    128 => 0,
+    129 => 0,
+    132 => 0,
+    133 => 0,
+    134 => 0,
+    135 => 0,
+    136 => 0,
+    137 => 0,
+    139 => 0,
+    140 => 0,
+    141 => 0,
+    142 => 0,
+    143 => 0,
+    144 => 0,
+    145 => 0,
+    146 => 0,
+    147 => 0,
+    148 => 0,
+  );
+  $handler->display->display_options['filters']['field_class_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_class_category_tid']['vocabulary'] = 'class_categories';
+  $handler->display->display_options['filters']['field_class_category_tid']['error_message'] = FALSE;
+  /* Filter criterion: Content: Sessions (field_class_session) */
+  $handler->display->display_options['filters']['field_class_session_value']['id'] = 'field_class_session_value';
+  $handler->display->display_options['filters']['field_class_session_value']['table'] = 'field_data_field_class_session';
+  $handler->display->display_options['filters']['field_class_session_value']['field'] = 'field_class_session_value';
+  $handler->display->display_options['filters']['field_class_session_value']['operator'] = 'not empty';
+  /* Filter criterion: Field collection item: Start Date -  start date (field_class_start_date) */
+  $handler->display->display_options['filters']['field_class_start_date_value']['id'] = 'field_class_start_date_value';
+  $handler->display->display_options['filters']['field_class_start_date_value']['table'] = 'field_data_field_class_start_date';
+  $handler->display->display_options['filters']['field_class_start_date_value']['field'] = 'field_class_start_date_value';
+  $handler->display->display_options['filters']['field_class_start_date_value']['relationship'] = 'field_class_session_value';
+  $handler->display->display_options['filters']['field_class_start_date_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_class_start_date_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Body (body) */
+  $handler->display->display_options['filters']['body_value']['id'] = 'body_value';
+  $handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
+  $handler->display->display_options['filters']['body_value']['field'] = 'body_value';
+  $handler->display->display_options['filters']['body_value']['operator'] = 'contains';
+  $handler->display->display_options['filters']['body_value']['value'] = 'video-player';
+  $handler->display->display_options['block_description'] = 'Video Recordings of Past Tech Briefings';
+
+  /* Display: [BACKUP] Video Recordings of Past Tech Briefings */
+  $handler = $view->new_display('block', '[BACKUP] Video Recordings of Past Tech Briefings', 'block_9');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Video Recordings of Past Tech Briefings';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'span10 offset1';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -1856,7 +2148,7 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['filters']['field_class_category_tid']['table'] = 'field_data_field_class_category';
   $handler->display->display_options['filters']['field_class_category_tid']['field'] = 'field_class_category_tid';
   $handler->display->display_options['filters']['field_class_category_tid']['value'] = array(
-    195 => '195',
+    220 => '220',
   );
   $handler->display->display_options['filters']['field_class_category_tid']['expose']['operator_id'] = 'field_class_category_tid_op';
   $handler->display->display_options['filters']['field_class_category_tid']['expose']['label'] = 'Category';

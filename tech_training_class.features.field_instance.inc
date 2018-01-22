@@ -193,11 +193,11 @@ function tech_training_class_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -211,7 +211,7 @@ function tech_training_class_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Description',
+    'label' => 'Class Description',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -304,7 +304,7 @@ function tech_training_class_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -554,8 +554,8 @@ function tech_training_class_field_default_field_instances() {
   t('Category');
   t('Class Category');
   t('Class Code');
+  t('Class Description');
   t('Cost');
-  t('Description');
   t('Featured Class');
   t('Location');
   t('Registration Link for University');
