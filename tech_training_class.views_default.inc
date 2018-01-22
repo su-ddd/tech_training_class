@@ -1398,6 +1398,12 @@ function tech_training_class_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Field collection item: Start Date -  start date (field_class_start_date) */
+  $handler->display->display_options['sorts']['field_class_start_date_value']['id'] = 'field_class_start_date_value';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['table'] = 'field_data_field_class_start_date';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['field'] = 'field_class_start_date_value';
+  $handler->display->display_options['sorts']['field_class_start_date_value']['relationship'] = 'field_class_session_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
